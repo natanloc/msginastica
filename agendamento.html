@@ -228,7 +228,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   flex-direction: column;
-  /* overflow: hidden; */
 }
 
 .info {
@@ -546,15 +545,12 @@ const verifyFourth = () => {
 }
 
 
-
-
 const verifyForms = {
   First: () => verifyFirst(),
   Second: () => verifySecond(),
   Third: () => verifyThird(),
   Fourth: () => verifyFourth()
 };
-
 
 
 // Pegando a largura de cada form
@@ -624,32 +620,38 @@ async function carregarHorarios() {
   const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
 
   try {
-      const response = await fetch(url);
-      const text = await response.text();
-      const json = JSON.parse(text.substring(47, text.length - 2));
+    const response = await fetch(url);
+    const text = await response.text();
+    const json = JSON.parse(text.substring(47, text.length - 2));
 
-      const dia = new Date(document.querySelector('#dia').value);
-      let weekDay = dia.getDay();
+    const dia = new Date(document.querySelector('#dia').value);
+    let weekDay = dia.getDay();
 
-      const horarios = json.table.rows.slice(1).map(row => row.c[weekDay]?.v).filter(Boolean);
+    const horarios = json.table.rows.slice(1).map(row => row.c[weekDay]?.v).filter(Boolean);
 
-      const select = document.getElementById("horarios");
-      select.innerHTML = ""; // Limpa as opções do HTML
+    let verifying = json.table.rows[1]?.c[weekDay]?.v;
+
+    if(verifying === undefined || verifying === null || verifying === "") {
+      showModal("Não temos horários disponíveis nessa data. Por favor, selecione outro dia.");
+    }
+
+    const select = document.getElementById("horarios");
+    select.innerHTML = ""; // Limpa as opções do HTML
 
 
-      // Cria a opção vazia para o default
-      const emptyOption = document.createElement("option");
-      emptyOption.value = "";
-      emptyOption.textContent = "";
-      select.appendChild(emptyOption);
+    // Cria a opção vazia para o default
+    const emptyOption = document.createElement("option");
+    emptyOption.value = "";
+    emptyOption.textContent = "";
+    select.appendChild(emptyOption);
 
-      // Cria as opções com as informações da tabela
-      horarios.forEach(horario => {
-        const option = document.createElement("option");
-        option.value = horario;
-        option.textContent = horario;
-        select.appendChild(option);
-      });
+    // Cria as opções com as informações da tabela
+    horarios.forEach(horario => {
+      const option = document.createElement("option");
+      option.value = horario;
+      option.textContent = horario;
+      select.appendChild(option);
+    });
 
   } catch (error) {
       console.error("Erro ao carregar horários:", error);
