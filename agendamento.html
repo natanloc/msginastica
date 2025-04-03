@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar aula experimental</title>
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+    !function (w, d, t) {
+      w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+      var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+      ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+    
+    
+      ttq.load('CVM2MFJC77U3HPMFMISG');
+      ttq.page();
+    }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+
+</head>
+<body>
+
+  <div id="modal">
+    <div id="modal-content">
+      <p></p>
+      <span onclick="closeModal()">&times;</span>
+    </div>
+  </div>
+
+  <div class="info">
+    <img src="./images/Logo-MS.png" alt="">
+    <h1>Agende sua aula experimental <span>gratuita</span></h1>
+  </div>
+
+  <div class="container">
+    <div class="slider">
+      <form action="" id="first">
+        <div class="field">
+          <label for="name">Nome do Responsável:</label>
+          <input type="text" name="name" id="nome">
+        </div>
+  
+        <div class="field">
+          <label for="phone">Telefone:</label>
+          <input type="tel" name="phone" id="telefone">
+        </div>
+  
+        <div class="field">
+          <label for="email">Email:</label>
+          <input type="email" name="email" id="email">
+        </div>
+  
+        <div class="field">
+          <label for="aluna">Nome da aluna:</label>
+          <input type="text" name="aluna" id="aluna">
+        </div>
+  
+        <div class="field">
+          <label for="age">Idade da aluna:</label>
+          <select name="age" id="idade">
+            <option value=""></option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+          </select>
+        </div>
+  
+        <button class="next">Próximo</button>
+        
+      </form>
+  
+  
+      <form action="" id="second">
+  
+        <div class="field">
+          <label for="age">Unidade de interesse</label>
+          <select name="branch" id="unidade">
+            <option value=""></option>
+            <option value="Recife">Recife</option>
+            <option value="Marista">Marista</option>
+            <option value="Anapolis">Anápolis</option>
+            <option value="Palmas">Palmas</option>
+            <option value="RioVerde">Rio Verde</option>
+            <option value="BelaVista">Bela Vista</option>
+            <option value="Londrina">Londrina</option>
+            <option value="JardimAmerica">Jardim América</option>
+            <option value="JardimAtlantico">Jardim Atlântico</option>
+          </select>
+        </div>
+  
+        <div class="buttons">
+          <button class="prev">Anterior</button>
+          <button class="next">Próximo</button>
+        </div>
+  
+  
+      </form>
+  
+  
+      <form action="" id="third">
+  
+        <div class="field">
+          <label for="calendar">Escolha um dia para a aula:</label>
+          <input type="date" name="calendar" id="dia" placeholder="Clique e escolha">
+        </div>
+  
+        <div class="buttons">
+          <button class="prev">Anterior</button>
+          <button class="next">Próximo</button>
+        </div>
+        
+      </form>
+  
+  
+      <form action="" id="fourth">
+  
+        <div class="field">
+          <label for="time">Escolha um horário para a aula:</label>
+          <select name="" id="horarios">
+            <option value=""></option>
+            <option value="">Carregando...</option>
+          </select>
+        </div>
+  
+        <div class="buttons">
+          <button class="prev">Anterior</button>
+          <button id="enviar">Agendar aula</button>
+        </div>
+  
+      </form>
+    </div>
+  </div>
+
+  <a href="https://api.whatsapp.com/send?phone=5562991540065" target="_blank"><button class="whatsapp"><img src="./images/whatsapp-icon.png" alt="">FALAR COM O SUPORTE</button></a>
+
+
+  <div class="snow">
+    <span style="--i:29"></span>
+    <span style="--i:32"></span>
+    <span style="--i:21"></span>
+    <span style="--i:35"></span>
+    <span style="--i:33"></span>
+    <span style="--i:20"></span>
+    <span style="--i:39"></span>
+    <span style="--i:10"></span>
+    <span style="--i:20"></span>
+    <span style="--i:26"></span>
+    <span style="--i:27"></span>
+    <span style="--i:11"></span>
+    <span style="--i:12"></span>
+</div>
+
+
+</body>
+</html>
+
+<style>
+
+#modal {
+  content: "";
+  display: none;
+  position: absolute;
+  background: rgb(0, 0, 0, 0.5);
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: .3s;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 1000;
+}
+#modal-content {
+  display: flex;
+  background: white;
+  border-radius: 8px;
+  padding: 3rem;
+  gap: 50px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  font-size: 1rem;
+}
+#modal span {
+  cursor: pointer;
+  position: absolute;
+  top: 8px;
+  right: 20px;
+  font-size: 24px;
+}
+
+
+
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  /* box-sizing: border-box; */
+}
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 0;
+  background-image: url(./images/herosection-desk.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+  /* overflow: hidden; */
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.info img {
+  width: 150px;
+}
+.info h1 {
+  font-size: 2rem;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-bottom: 30px;
+  width: 450px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.container {
+  background: rgb(255, 255, 255, 0.3);
+  backdrop-filter: blur(2px);
+  width: 360px;
+  overflow: hidden;
+  border-radius: 8px;
+  z-index: 2;
+}
+.slider {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 60px;
+  position: relative;
+  transition: .5s;
+  padding: 4rem 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  align-items: center;
+  color: white;
+}
+
+#first {
+  margin-left: 0px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-bottom: 15px;
+}
+
+label {
+  margin-bottom: 2px;
+}
+
+input, select, option {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding: 6px 5px;
+  width: 280px;
+  height: 20px;
+  border-radius: 2px;
+  border: none;
+  font-size: 1rem;
+}
+select {
+  height: 32px;
+}
+#dia {
+  height: 32px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+
+button {
+  width: 120px;
+  height: 30px;
+  background: linear-gradient(145deg, rgb(38, 200, 172), rgb(118, 225, 201));
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: rgb(15, 80, 69);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+button:hover {
+  box-shadow: 0 0 12px rgb(38, 200, 172);
+}
+
+.whatsapp {
+  width: 300px;
+  height: 38px;
+  background: #17d164;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  margin-top: 40px;
+}
+.whatsapp img {
+  width: 25px;
+}
+
+
+.snow {
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
+.snow span{
+  min-width: 6px;
+  height: 6px;
+  background: rgb(102, 20, 255);
+  border-radius: 50%;
+  box-shadow: -100px 20px 10px #0effff,
+  -100px 20px 6px #0effff;
+  margin: 0 auto;
+  transform: translateY(140vh);
+  animation: animateSnow calc(140s / var(--i)) linear infinite;
+  filter: blur(0.5px);
+}
+@keyframes animateSnow {
+  0% {
+    transform: translateY(100vh);
+    translate: 80px;
+    opacity: 1;
+  }
+
+  90% {
+    translate: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-40vh);
+    translate: 40px;
+    opacity: 0;
+  }
+}
+
+
+@media(max-width: 600px) {
+
+.info h1 {
+  font-size: 1.5rem;
+  width: 300px;
+}
+
+#modal-content {
+  padding: 1rem 2rem;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  text-align: center;
+}
+
+}
+
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+
+document.addEventListener("DOMContentLoaded", function() {
+  const dateInput = document.querySelector("#dia");
+
+  dateInput.addEventListener("click", function() {
+      this.showPicker(); // Abre o calendário quando o input for clicado
+  });
+});
+
+
+
+
+// DINAMISMO DO FORMULÁRIO
+
+let prev = document.querySelectorAll('.prev');
+let next = document.querySelectorAll('.next');
+let slider = document.querySelector('.slider');
+let forms = document.querySelectorAll('form');
+let currentIndex = 0;
+
+let toggle = true;
+
+let list = ['First', 'Second', 'Third', 'Fourth'];
+let countList = 0;
+
+
+let inputs01 = document.querySelectorAll('#first input');
+let select01 = document.querySelector('#first select');
+
+let babySheets = {
+  Recife: '13vib2ZzsFDTQfDp2RG4fQdSWph9I0zB_',
+  RioVerde: '1jH5MZBKHpkWm30H5evxKynVzAga0sThu',
+  Palmas: '10iw3Fc65hOIGr-zmXK5lvp6SPGAHJ6LK',
+  Marista: '1b9tTU2vT_h12sARSs5_2PVsXZ-1q542M',
+  Londrina: '1jbMprS4mw6q1dQBh_OD4mC2DTyTV-48S',
+  JardimAtlantico: '1Isk3CtwTii527f0_SuHD6C1fyT7rv0fZ',
+  BelaVista: '1rYGCHzijmXuEudGcrLfHbxY4bZainq86',
+  JardimAmerica: '1HOENQHMncWGV4XMaGh2DkrUasBExkJUe',
+  Anapolis: '1g2OwGqpIeU-t0geWZ08x3R5rala-f6rL'
+}
+
+let iniciacaoSheets = {
+  Recife: '1toncKvKskm-FP66DneR7YMx08tVU4wEr',
+  RioVerde: '1_OQO5AICIOjSrbSXdl5NlB_A6puuP7xr',
+  Palmas: '1ECFClDgmhU0qRIiJIF-tETUXm9PN73FR',
+  Marista: '1RU5pD7OXnVEbjXE9iI071huEejHG5DdQ',
+  Londrina: '1KitmgQ2JhC5QHxxdq8KNdA6DdAzL2Rhg',
+  JardimAtlantico: '1SIZJPVvz17sAJrZPOB0EQvUK5SbgMfdy',
+  BelaVista: '1kiZ4m-ropAwMMAyD13eImOruwb8HfJn0',
+  JardimAmerica: '1x6Zm9FVU89lBooGNYkI4rn8y6R0RE0-b',
+  Anapolis: '18JcplBHpZwC7ex3F8uwfdbKsAW60qXhz'
+}
+
+const verifyFirst = () => {
+  toggle = true;
+
+  inputs01.forEach(input => {
+    if(input.value == '') {
+      toggle = false;
+    }
+  })
+
+  if (select01.value == '') {
+    toggle = false;
+  }
+
+  if (document.querySelector('#telefone').value.length < 11) {
+    toggle = false;
+  }
+
+  if (!document.querySelector('#email').value.includes('@')) {
+    toggle = false;
+  }
+
+  return toggle;
+}
+
+
+let inputs02 = document.querySelectorAll('#second select');
+
+const verifySecond = () => {
+  toggle = true;
+
+  inputs02.forEach(input => {
+    if(input.value == '') {
+      toggle = false;
+    }
+  })
+
+  return toggle;
+}
+
+
+let inputs03 = document.querySelectorAll('#third input');
+
+const verifyThird = () => {
+  toggle = true;
+  let today = new Date();
+  let dateChosen = new Date(document.querySelector('#dia').value);
+
+  inputs03.forEach(input => {
+    if(input.value == '') {
+      toggle = false;
+    }
+  })
+  
+  if(dateChosen < today) {
+    toggle = false;
+  }
+  
+  if(dateChosen.toISOString().split('T')[0] === '2025-04-25') {
+    toggle = false;
+  }
+
+  carregarHorarios();
+
+  return toggle;
+}
+
+let inputs04 = document.querySelectorAll('#fourth select');
+
+const verifyFourth = () => {
+  toggle = true;
+
+  inputs04.forEach(input => {
+    if(input.value == '') {
+      toggle = false;
+    }
+    
+    if(new Date(document.querySelector('#dia').value).getDay() == 5 || new Date(document.querySelector('#dia').value).getDay() == 6) {
+      toggle = false;
+    }
+  })
+
+  return toggle;
+}
+
+
+
+
+const verifyForms = {
+  First: () => verifyFirst(),
+  Second: () => verifySecond(),
+  Third: () => verifyThird(),
+  Fourth: () => verifyFourth()
+};
+
+
+
+// Pegando a largura de cada form
+const formWidth = forms[0].offsetWidth;
+
+const formWidthList = [290, 292, 294, 293]
+
+// Atualizar posição do slider
+const updateSliderPosition = () => {
+  slider.style.transform = `translateX(-${currentIndex * (formWidthList[currentIndex] + 50)}px)`;
+};
+
+next.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const isValid = verifyForms[list[countList]](); // Captura o retorno da função
+
+    if (currentIndex < forms.length - 1 && isValid) {
+      currentIndex++;
+      updateSliderPosition();
+      countList++;
+    } else {
+      // alert("Por favor, preencha todos os campos.");
+      if (document.querySelector('#telefone').value.length < 11) {
+        showModal("Por favor, preencha o telefone com o DDD.")
+      } else if (!document.querySelector('#email').value.includes('@')) {
+        showModal("Por favor, preencha o email corretamente.")
+      } else if (countList == 2) {
+        if (new Date(document.querySelector('#dia').value).toISOString().split('T')[0] === '2025-04-25') {
+          showModal("Não teremos aulas no dia 25/04. Por favor, escolha outra data.");
+          return;
+        }
+        showModal("Selecione uma data válida, por favor.")
+      } else {
+        showModal("Por favor, preencha todos os campos.")
+      }
+    }
+  });
+});
+
+
+prev.forEach(button => {
+  button.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (currentIndex > 0) {
+      currentIndex--;
+      updateSliderPosition();
+
+      countList--;
+
+    }
+  });
+});
+
+// ==============================
+// PEGANDO INFORMAÇÕES DA TABELA
+async function carregarHorarios() {
+  let sheetId = '';
+
+  if(document.querySelector('#idade').value < 6)  {
+    sheetId = babySheets[document.querySelector("#unidade").value];
+  } else {
+    sheetId = iniciacaoSheets[document.querySelector("#unidade").value];
+  }
+
+  const url = `https://docs.google.com/spreadsheets/d/${sheetId}/gviz/tq?tqx=out:json`;
+
+  try {
+      const response = await fetch(url);
+      const text = await response.text();
+      const json = JSON.parse(text.substring(47, text.length - 2));
+
+      const dia = new Date(document.querySelector('#dia').value);
+      let weekDay = dia.getDay();
+
+      const horarios = json.table.rows.slice(1).map(row => row.c[weekDay]?.v).filter(Boolean);
+
+      const select = document.getElementById("horarios");
+      select.innerHTML = ""; // Limpa as opções do HTML
+
+
+      // Cria a opção vazia para o default
+      const emptyOption = document.createElement("option");
+      emptyOption.value = "";
+      emptyOption.textContent = "";
+      select.appendChild(emptyOption);
+
+      // Cria as opções com as informações da tabela
+      horarios.forEach(horario => {
+        const option = document.createElement("option");
+        option.value = horario;
+        option.textContent = horario;
+        select.appendChild(option);
+      });
+
+  } catch (error) {
+      console.error("Erro ao carregar horários:", error);
+  }
+}
+
+// ==============================
+
+// POST PLANILHA
+
+async function enviarFormulario(event) {
+  event.preventDefault();
+  const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd9WsnWsJvcpnpjFs7dWhF2SwATY9F4DZiRdVmor9J15SYTKg/formResponse";
+
+  if(verifyFourth()) {
+    const formData = new FormData();
+    formData.append("entry.937086527", document.getElementById("nome").value);
+    formData.append("entry.125726630", document.getElementById("telefone").value);
+    formData.append("entry.386961587", document.getElementById("email").value);
+    formData.append("entry.1101264569", document.getElementById("aluna").value);
+    formData.append("entry.1663137627", document.getElementById("idade").value);
+    formData.append("entry.1067523692", document.getElementById("unidade").value);
+    formData.append("entry.1259448517", document.getElementById("dia").value);
+    formData.append("entry.393162635", document.getElementById("horarios").value);
+    
+    try {
+      const response = await fetch(formUrl, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
+      });
+  
+      // alert("Formulário enviado com sucesso!");
+      // showModal("Aula agendada com sucesso!")
+      window.location.href="/aula-agendada.html"
+    } catch (error) {
+      console.error("Erro ao enviar:", error);
+      alert("Falha ao enviar o formulário.");
+    }
+  } else {
+    showModal("Por favor, selecione uma data e um horário válidos.");
+  }
+
+}
+
+document.querySelector("#fourth").addEventListener('submit', enviarFormulario);
+
+// ==============================
+
+// MODAL
+
+function showModal(message) {
+  let modal = document.querySelector("#modal");
+  let modalText = document.querySelector("#modal p");
+  
+  modalText.textContent = message;
+  modal.style.display = "block";
+  setTimeout(() => {
+    modal.style.opacity = "1";
+  }, 100);
+
+
+}
+
+function closeModal() {
+  modal.style.opacity = "0";
+
+  setTimeout(() => {
+    document.querySelector("#modal").style.display = "none";
+  }, 100);
+}
+
+// ==============================
+
+
+</script>

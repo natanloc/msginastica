@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sua aula foi agendada!</title>
+</head>
+<body>
+  <img src="./images/Logo-MS.png" alt="">
+  <div class="container">
+    <h1>AULA AGENDADA COM SUCESSO!</h1>
+    <span class="separador"></span>
+
+    <h3>
+      LEMBRETES IMPORTANTES:
+    </h3>
+
+    
+    <p style="margin-bottom: 10px; text-align: center;">Prepare-se para uma aula experimental de ginástica artística incrível</p>
+
+    <div class="item">
+      <span></span>
+      <p>Usar collant ou camiseta / short ou roupas de práticas esportivas;</p>
+    </div>
+
+    <div class="item">
+      <span></span>
+      <p>Se precisar cancelar a aula, avise com antecedência.</p>
+    </div>
+
+    <div class="item">
+      <span></span>
+      <p>Não usar brincos, anéis e/ou colares;</p>
+    </div>
+
+    <div class="item">
+      <span></span>
+      <p>Trazer garrafinha com água;</p>
+    </div>
+
+    <div class="item">
+      <span></span>
+      <p>Manter os cabelos presos;</p>
+    </div>
+
+    <div class="item">
+      <span></span>
+      <p>Chegar com antecedência;</p>
+    </div>
+
+    <span class="separador"></span>
+    <div class="suporte">
+      <p class="suporte">Caso deseje reagendar a aula ou precise tirar alguma dúvida, entre em contato com nosso suporte</p>
+      <a href="https://api.whatsapp.com/send?phone=5562991540065&text=Oi!%20Cliquei%20no%20an%C3%BAncio,%20tenho%20interesse%20na%20aula%20experimental" target="_blank"><button>ENTRAR EM CONTATO</button></a>
+
+    </div>
+    
+  </div>
+
+
+  <div class="snow">
+    <span style="--i:29"></span>
+    <span style="--i:32"></span>
+    <span style="--i:21"></span>
+    <span style="--i:35"></span>
+    <span style="--i:33"></span>
+    <span style="--i:20"></span>
+    <span style="--i:39"></span>
+    <span style="--i:10"></span>
+    <span style="--i:20"></span>
+    <span style="--i:26"></span>
+    <span style="--i:27"></span>
+    <span style="--i:11"></span>
+    <span style="--i:12"></span>
+</div>
+
+</body>
+</html>
+
+<style>
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  background: black;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-image: url(./images/herosection-desk.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  flex-direction: column;
+}
+
+button {
+  width: 220px;
+  height: 34px;
+  background: linear-gradient(145deg, rgb(38, 200, 172), rgb(118, 225, 201));
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color: rgb(8, 46, 40);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: .3s;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.separador {
+  width: 500px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.507);
+  display: block;
+  margin: 1.5rem 0;
+}
+
+img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+.container {
+  background-color: rgb(255, 255, 255, 0.25);
+  backdrop-filter: blur(3px);
+  border-radius: 18px;
+  padding: 3rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.363);
+  z-index: 2;
+}
+.container h1 {
+  text-align: center;
+  width: 350px;
+  color: white;
+}
+.container h3 {
+  text-align: center;
+  margin-bottom: 10px;
+
+}
+.container p {
+  width: 530px;
+  line-height: 30px;
+  font-weight: 500;
+}
+
+.container .item span {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  rotate: 45deg;
+  background: rgb(38, 200, 172);
+  display: block;
+}
+
+.container .item {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.suporte {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.suporte p {
+  line-height: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* ====================================== */
+
+.snow {
+  display: flex;
+  width: 100vw;
+  position: fixed;
+  z-index: 1;
+}
+.snow span{
+  min-width: 6px;
+  height: 6px;
+  background: rgb(102, 20, 255);
+  border-radius: 50%;
+  box-shadow: -100px 20px 10px #0effff,
+  -100px 20px 6px #0effff;
+  margin: 0 auto;
+  transform: translateY(140vh);
+  animation: animateSnow calc(140s / var(--i)) linear infinite;
+  filter: blur(0.5px);
+}
+@keyframes animateSnow {
+  0% {
+    transform: translateY(100vh);
+    translate: 80px;
+    opacity: 1;
+  }
+
+  90% {
+    translate: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(-40vh);
+    translate: 40px;
+    opacity: 0;
+  }
+}
+
+
+@media(max-width: 600px) {
+
+.container {
+  width: 330px;
+  padding: 2rem 1rem;
+}
+
+.separador {
+  width: 300px;
+  margin: 1rem 0;
+}
+
+.container h1 {
+  font-size: 1.8rem;
+  width: 250px;
+}
+
+.container .item {
+  align-items: start;
+}
+
+.container .item span {
+  margin-top: 6px;
+}
+
+.container p {
+  width: 300px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+}
+
+</style>
