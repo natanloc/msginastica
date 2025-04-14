@@ -667,6 +667,10 @@ async function enviarFormulario(event) {
   const formUrl = "https://docs.google.com/forms/d/e/1FAIpQLSd9WsnWsJvcpnpjFs7dWhF2SwATY9F4DZiRdVmor9J15SYTKg/formResponse";
 
   if(verifyFourth()) {
+
+    let valorDia = document.getElementById("dia").value;
+    let [ano, mes, dia] = valorDia.split('-');
+
     const formData = new FormData();
     formData.append("entry.937086527", document.getElementById("nome").value);
     formData.append("entry.125726630", document.getElementById("telefone").value);
@@ -674,8 +678,10 @@ async function enviarFormulario(event) {
     formData.append("entry.1101264569", document.getElementById("aluna").value);
     formData.append("entry.1663137627", document.getElementById("idade").value);
     formData.append("entry.1067523692", document.getElementById("unidade").value);
-    formData.append("entry.1259448517", document.getElementById("dia").value);
+    formData.append("entry.1259448517", new Date(ano, mes - 1, dia, 12, 0, 0).toLocaleDateString('pt-BR'));
     formData.append("entry.393162635", document.getElementById("horarios").value);
+
+
     
     try {
       const response = await fetch(formUrl, {
