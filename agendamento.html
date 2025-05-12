@@ -175,7 +175,7 @@
   position: absolute;
   background: rgb(0, 0, 0, 0.5);
   width: 100vw;
-  height: 100vh;
+  height: 110vh;
   z-index: 1;
   top: 0;
   left: 0;
@@ -218,7 +218,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -533,21 +533,68 @@ const verifyThird = () => {
 
 let inputs04 = document.querySelectorAll('#fourth select');
 
+// const verifyFourth = () => {
+
+//   let dateInput = document.querySelector('#third input');
+//   let unidade = document.querySelector('#second select');
+
+//   toggle = true;
+
+//   inputs04.forEach(input => {
+//     if(input.value == '') {
+//       toggle = false;
+//     }
+    
+//     if(new Date(document.querySelector('#dia').value).getDay() == 5 || new Date(document.querySelector('#dia').value).getDay() == 6) {
+//       toggle = false;
+//     }
+
+//   })
+
+//   return toggle;
+// }
+
 const verifyFourth = () => {
-  toggle = true;
+  const inputs04 = document.querySelectorAll('#fourth select');
+  const dateInput = document.querySelector('#third input');
+  const unidade = document.querySelector('#second select');
+  const diaValor = document.querySelector('#dia').value;
+
+  let toggle = true;
+
+  const selectedDate = new Date(diaValor);
+  const dayOfWeek = selectedDate.getDay(); // 5 = sexta, 6 = sábado
+  const dataFormatada = diaValor; // já está no formato 'yyyy-mm-dd'
 
   inputs04.forEach(input => {
-    if(input.value == '') {
+    // Verifica se algum select está vazio
+    if (input.value === '') {
       toggle = false;
+      return;
     }
-    
-    if(new Date(document.querySelector('#dia').value).getDay() == 5 || new Date(document.querySelector('#dia').value).getDay() == 6) {
+
+    // Bloqueia sextas e sábados
+    if (dayOfWeek === 5 || dayOfWeek === 6) {
       toggle = false;
+      return;
     }
-  })
+
+    // Bloqueia horários específicos nos dias 15 e 16/05/2025 para Recife
+    const horariosProibidos = ['17h15', '18h30', '19h30'];
+    const datasProibidas = ['2025-05-15', '2025-05-16'];
+
+    if (datasProibidas.includes(dataFormatada) && unidade.value === 'Recife') {
+      if (horariosProibidos.includes(input.value)) {
+        toggle = false;
+        showModal('Não teremos aula nesse dia, especificamente nesse horário.');
+        return;
+      }
+    }
+  });
 
   return toggle;
-}
+};
+
 
 
 const verifyForms = {
