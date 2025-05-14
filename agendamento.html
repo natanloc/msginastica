@@ -582,6 +582,8 @@ const verifyFourth = () => {
     // Bloqueia horários específicos nos dias 15 e 16/05/2025 para Recife
     const horariosProibidos = ['17h15', '18h30', '19h30'];
     const datasProibidas = ['2025-05-15', '2025-05-16'];
+    const datasProibidasAnapolis = ['2025-05-20', '2025-05-16'];
+    
 
     if (datasProibidas.includes(dataFormatada) && unidade.value === 'Recife') {
       if (horariosProibidos.includes(input.value)) {
@@ -589,6 +591,11 @@ const verifyFourth = () => {
         showModal('Não teremos aula nesse dia, especificamente nesse horário.');
         return;
       }
+    }
+    else if(datasProibidasAnapolis.includes(dataFormatada) && unidade.value === 'Anapolis') {
+      toggle = false;
+      showModal('Não teremos aula nesse dia, especificamente nesse horário.');
+      return;
     }
   });
 
